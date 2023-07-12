@@ -12,10 +12,7 @@ public class Main {
         for (int i = 1; i < array.length; i++) {
             int interval = Math.abs(array[i] - number);
             if (interval <= testInterval) {
-                if (array[i] - number >= 0) {
-                    iNumber = i;
-                    testInterval = interval;
-                }else if (interval != testInterval){
+                if ((array[i] - number >= 0) || (interval != testInterval)) {
                     iNumber = i;
                     testInterval = interval;
                 }
